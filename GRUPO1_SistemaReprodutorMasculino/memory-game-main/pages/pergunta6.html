@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="estiloPequenas.css" />
+    <title>Quiz Sistema Digestorio</title>
+    <!-- Cria icon pro site -->
+    <link rel="icon" type="image/png" href="../imagens/fotinha3.png" />
+</head>
+
+<body bgcolor="#DEF5E5">
+
+    <div class="container">
+        <div class="PergunPrinc">
+            06 - Todos os órgãos do sistema digestório produzem enzimas digestivas, exceto:
+
+        </div>
+        <button onclick="alternativaCerta()" id="blocoA">
+            a) Fígado.
+        </button>
+
+        <button onclick="alternativaErrada();" id="blocoB">
+            b) Duodeno.
+        </button>
+
+        <button onclick="alternativaErrada()" id="blocoC">
+            c) Pâncreas.
+        </button>
+
+        <button onclick="alternativaErrada()" id="blocoD">
+            d) Estômago.
+        </button>
+
+    </div>
+
+    <button onclick="mudarPerg()" class="proxPergunt"> Proxima pergunta </button>
+
+    <script>
+        var pontos = 0;
+        const respostaCorreta = document.getElementById("blocoA");
+        respostaCorreta.addEventListener("click", alternativaCerta)
+
+
+        function alternativaCerta() {
+            pontos++;
+            window.alert("Você acertou!");
+        }
+
+        function alternativaErrada() {
+            window.alert("Nao foi dessa vez");
+        }
+
+        function mudarPerg() {
+            window.location.assign("pergunta7.html");
+        }
+    </script>
+
+</body>
+
+</html>

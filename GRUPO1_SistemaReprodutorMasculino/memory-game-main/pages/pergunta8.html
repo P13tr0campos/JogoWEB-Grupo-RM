@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/estiloGrandes.css" />
+    <title>Quiz Sistema Digestorio</title>
+    <!-- Cria icon pro site -->
+    <link rel="icon" type="image/png" href="images/fotinha3.png" />
+</head>
+
+<body bgcolor="#DEF5E5">
+
+    <div class="container">
+        <div class="PergunPrinc">
+            08 - Em nossa digestão, fazemos o movimento de peristaltismo, que serve para fazer com que o alimento….
+        </div>
+        <button onclick="alternativaErrada()" id="blocoA">
+            a) se misture à saliva.
+        </button>
+
+        <button onclick="alternativaErrada();" id="blocoB">
+            b) seja misturado ao suco pancreático.
+        </button>
+
+        <button onclick="alternativaErrada()" id="blocoC">
+            c) misture-se com o suco gástrico.
+        </button>
+
+        <button onclick="alternativaCerta()" id="blocoD">
+            d) se movimente ao longo do sistema digestório.
+        </button>
+
+    </div>
+
+    <button onclick="mudarPerg()" class="proxPergunt"> Proxima pergunta </button>
+
+    <script>
+        var pontos = 0;
+        const respostaCorreta = document.getElementById("blocoD");
+        respostaCorreta.addEventListener("click", alternativaCerta)
+
+
+        function alternativaCerta() {
+            pontos++;
+            window.alert("Você acertou!");
+        }
+
+        function alternativaErrada() {
+            window.alert("Nao foi dessa vez");
+        }
+
+        function mudarPerg() {
+            window.location.assign("pergunta9.html");
+        }
+    </script>
+
+</body>
+
+</html>
